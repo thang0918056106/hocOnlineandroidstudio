@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/textview0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="483dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginRight="192dp"
+        android:text="0"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonrandom"
+        android:layout_width="128dp"
+        android:layout_height="83dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="143dp"
+        android:layout_marginLeft="143dp"
+        android:layout_marginTop="354dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="140dp"
+        android:text="RANDOM"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginRight="98dp"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextmax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="218dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginRight="98dp"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/buttonmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="153dp"
+        android:layout_marginEnd="314dp"
+        android:layout_marginRight="314dp"
+        android:text="MIN" />
+
+    <Button
+        android:id="@+id/buttonmax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonmin"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="313dp"
+        android:layout_marginRight="313dp"
+        android:text="Max" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ứng dụng random"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"/>
+
+</RelativeLayout>
