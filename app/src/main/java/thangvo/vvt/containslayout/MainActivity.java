@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,31 +18,28 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
-    RelativeLayout rltl;
-    ImageView hinh1,hinh2,hinh3;
-    Button bntchuyenHinh;
+    Button btn;
+    ProgressBar prb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rltl = (RelativeLayout) findViewById(R.id.relativeLayout);
-        bntchuyenHinh = (Button) findViewById(R.id.button3);
+        btn = (Button) findViewById(R.id.buttondownload);
+        prb = (ProgressBar) findViewById(R.id.progressBar2ngang);
 
-        final ArrayList<Integer> listHinhAnh = new ArrayList<>();
-        listHinhAnh.add(R.drawable.hinhxe);
-        listHinhAnh.add(R.drawable.hinhdep1);
-
-        bntchuyenHinh.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Random random = new Random();
-                int vitri = random.nextInt(listHinhAnh.size());
-                rltl.setBackgroundResource(listHinhAnh.get(vitri));
+                int xuly = prb.getProgress();
+                if (xuly >= prb.getMax()){
+                    xuly = 0;
+                }
+                prb.setProgress(xuly + 10);
             }
         });
+
 
     }
 }
