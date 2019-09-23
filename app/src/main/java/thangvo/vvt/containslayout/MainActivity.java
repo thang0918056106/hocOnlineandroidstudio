@@ -3,6 +3,7 @@ package thangvo.vvt.containslayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -29,17 +30,27 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.buttondownload);
         prb = (ProgressBar) findViewById(R.id.progressBar2ngang);
 
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int xuly = prb.getProgress();
-                if (xuly >= prb.getMax()){
-                    xuly = 0;
-                }
-                prb.setProgress(xuly + 10);
+                CountDownTimer countDownTimer = new CountDownTimer(10000, 200) {
+                    @Override
+                    public void onTick(long l) {
+                        int vitri =prb.getProgress();
+                        if(vitri >= prb.getMax()){
+                            vitri = 0;
+                        }
+                        prb.setProgress(vitri + 10);
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        Toast.makeText(MainActivity.this, "Finished", Toast.LENGTH_SHORT).show();
+                    }
+                };
+                countDownTimer.start();
             }
         });
-
-
     }
 }
